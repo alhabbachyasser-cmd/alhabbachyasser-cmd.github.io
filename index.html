@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tekstilrens Oslo – Lei møbelrens & tepperens</title>
+  <meta name="description" content="Lei profesjonell tekstilrenser i Oslo. Perfekt for sofa, tepper og bilseter. Selvbetjent henting på Etterstadsletta 3. Åpent 05–22. Book via Hygglo eller SMS." />
+
+  <style>
+    :root{
+      --bg:#0b1220; --panel:#111827; --card:#1e293b;
+      --text:#f1f5f9; --muted:#cbd5e1; --accent:#facc15;
+      --line:rgba(255,255,255,.10); --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit}
+    .container{width:min(1050px,92%);margin:0 auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(11,18,32,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+    .brand{font-weight:900;letter-spacing:.2px}
+    .nav a{font-weight:800;text-decoration:none}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 16px;border-radius:999px;border:1px solid var(--line);text-decoration:none;font-weight:900}
+    .btn.primary{background:rgba(250,204,21,.18);border-color:rgba(250,204,21,.35)}
+    .btn.outline{background:transparent}
+
+    /* HERO */
+    .hero{
+      padding:120px 0;
+      min-height:520px;
+      background-color:#0b1220;
+      background-image:
+        linear-gradient(rgba(11,18,32,0.78), rgba(11,18,32,0.78)),
+        url("./IMG_2808_konvertert.jpg");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+
+    .heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:center}
+    h1{font-size:clamp(28px,3.2vw,44px);line-height:1.12;margin:10px 0 12px}
+    .lead{color:var(--muted);margin:0 0 18px}
+    .badge{display:inline-flex;padding:6px 10px;border-radius:999px;border:1px solid rgba(250,204,21,.25);color:rgba(250,204,21,.95);background:rgba(250,204,21,.08);font-weight:900;font-size:12px}
+    .card{background:rgba(30,41,59,.55);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .section{padding:44px 0}
+    .section.alt{background:rgba(17,24,39,.35);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    .price{font-size:28px;font-weight:950}
+    .muted{color:var(--muted)}
+    .twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center;margin-top:16px}
+    .steps{display:grid;gap:10px;margin-top:14px}
+    .step{display:flex;gap:10px;align-items:flex-start;background:rgba(30,41,59,.35);border:1px solid var(--line);border-radius:var(--radius);padding:12px}
+    .num{width:26px;height:26px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:950;background:rgba(250,204,21,.12);border:1px solid rgba(250,204,21,.22)}
+    footer{padding:28px 0;background:rgba(17,24,39,.35);border-top:1px solid var(--line)}
+    .sticky{position:fixed;left:12px;right:12px;bottom:12px;display:none;gap:10px;z-index:99}
+    .sticky a{flex:1}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line)}
+    @media (max-width:900px){
+      .hero{padding:90px 0;min-height:auto}
+      .heroGrid,.twoCol{grid-template-columns:1fr}
+      .cards,.pricing,.gallery{grid-template-columns:1fr}
+      .sticky{display:flex}
+      body{padding-bottom:78px}
+      .gallery img{height:auto}
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">Tekstilrens Oslo</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn outline" href="#priser">Priser</a>
+      <a class="btn outline" href="#henting">Henting</a>
+      <a class="btn primary" href="tel:+4799365520">Ring 99 36 55 20</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container heroGrid">
+      <div>
+        <div class="badge">Møbelrens • Tepperens • Bilseter</div>
+        <h1>Lei tekstilrenser i Oslo – rens sofa, tepper og bilseter selv</h1>
+        <p class="lead">
+          Profesjonell maskin for hjemmerens. Enkel <strong>selvbetjent henting</strong> på
+          <strong>Etterstadsletta 3</strong>. Åpent <strong>05–22</strong> alle dager.
+        </p>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin:14px 0">
+          <a class="btn primary" href="https://www.hygglo.no/i/4da-kraftig-tekstilrensertepperenser-leies-ut-billig-i-bergen-101" target="_blank" rel="noopener">Book via Hygglo</a>
+          <a class="btn outline" href="sms:+4799365520?&body=Hei!%20Jeg%20vil%20booke%20tekstilrenser.%20By:%20Oslo%20Dato:%20%20Tidsrom:%20%20(1%20time/1%20dag/3%20dager)%20">Send SMS</a>
+        </div>
+
+        <div class="card">
+          <strong>Rabattkode:</strong> <span style="color:var(--accent)">7YC50</span> (50 kr avslag).  
+          <span class="muted">På Hygglo: klikk profil → “rabattkoder”.</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-top:0">Info</h3>
+        <p style="margin:0"><strong>Adresse:</strong> Etterstadsletta 3, Oslo</p>
+        <p style="margin:0"><strong>Åpent:</strong> 05–22 alle dager</p>
+        <p style="margin:10px 0 0" class="muted">
+          Spørsmål på SMS. For booking: skriv by + dato/tid.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="bilder">
+    <div class="container">
+      <h2>Bilder</h2>
+      <p class="muted">Maskiner og utlevering (selvbetjent).</p>
+      <div class="gallery">
+        <img src="./IMG_2808_konvertert.jpg" alt="Lagerrom med tekstilrensere" />
+        <img src="./IMG_5188_konvertert.jpg" alt="Tekstilrenser" />
+        <img src="./IMG_4443_konvertert.jpg" alt="Rengjøringsmiddel" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="priser">
+    <div class="container">
+      <h2>Prisliste (inkl. MVA)</h2>
+      <p class="muted">Helgetillegg: <strong>50 kr per døgn</strong> i helger.</p>
+
+      <div class="pricing">
+        <div class="card">
+          <h3>1 time</h3>
+          <div class="price">99,-</div>
+        </div>
+        <div class="card" style="border-color:rgba(250,204,21,.35)">
+          <h3>1 dag</h3>
+          <div class="price">187,-</div>
+          <p class="muted" style="margin:8px 0 0">Mest populær</p>
+        </div>
+        <div class="card">
+          <h3>3 dager</h3>
+          <div class="price">499,-</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <strong>Viktig:</strong> Maks vanntemperatur <strong>50°C</strong>. Kunden må rengjøre maskinen etter bruk (guide følger med).
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="henting">
+    <div class="container">
+      <h2>Henting – helt selvbetjent</h2>
+      <div class="twoCol">
+        <div class="card">
+          <p>
+            Maskinen hentes fra <strong>City Self Storage</strong> på <strong>Etterstadsletta 3</strong>.
+            Du får prosedyre tilsendt for tilgang – <strong>ingen nøkkel eller personale</strong>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top:0">Kontakt</h3>
+          <p style="margin:0"><strong>Telefon:</strong> <a href="tel:+4799365520">99 36 55 20</a></p>
+          <p style="margin:0"><strong>E-post:</strong> <a href="mailto:alhabbachyasser@gmail.com">alhabbachyasser@gmail.com</a></p>
+          <p class="muted" style="margin-top:10px">
+            Åpningstid: 05–22 alle dager. For booking på SMS: skriv by + dato/tid.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <div>
+        <strong>Tekstilrens Oslo</strong><br>
+        <span class="muted">Etterstadsletta 3 • Åpent 05–22</span>
+      </div>
+      <div class="muted">© <span id="year"></span></div>
+    </div>
+  </footer>
+
+  <div class="sticky">
+    <a class="btn outline" href="tel:+4799365520">Ring</a>
+    <a class="btn outline" href="sms:+4799365520?&body=Hei!%20Jeg%20vil%20booke%20tekstilrenser.%20By:%20Oslo%20Dato:%20%20Tidsrom:%20%20(1%20time/1%20dag/3%20dager)%20">SMS</a>
+    <a class="btn primary" href="https://www.hygglo.no/i/4da-kraftig-tekstilrensertepperenser-leies-ut-billig-i-bergen-101" target="_blank" rel="noopener">Book</a>
+  </div>
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
