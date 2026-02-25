@@ -8,22 +8,28 @@
 
   <style>
     :root{
-      --bg:#0b1220;
-      --panel:#111827;
-      --card:#111c33;
+      /* Lysere tema + mer synlig bakgrunn */
+      --bg:#0f172a;              /* litt lysere enn før */
+      --bg2:#111c33;             /* sekundær bakgrunn */
+      --panel:rgba(17,24,39,.62);
+      --card:rgba(17,28,51,.78);
+      --card2:rgba(255,255,255,.06);
       --text:#f1f5f9;
-      --muted:#cbd5e1;
+      --muted:#d5deea;
       --accent:#facc15;
-      --line:rgba(255,255,255,.10);
+      --line:rgba(255,255,255,.14);
       --radius:16px;
-      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --shadow: 0 12px 30px rgba(0,0,0,.28);
     }
 
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:var(--bg);
+      background:
+        radial-gradient(1200px 600px at 15% -10%, rgba(250,204,21,.10), transparent 60%),
+        radial-gradient(900px 500px at 95% 10%, rgba(99,102,241,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg), #0b1220 70%, #0a1020);
       color:var(--text);
       line-height:1.6;
     }
@@ -33,7 +39,7 @@
     /* Header */
     header{
       position:sticky; top:0; z-index:50;
-      background:rgba(11,18,32,.88);
+      background:rgba(15,23,42,.86);
       backdrop-filter: blur(10px);
       border-bottom:1px solid var(--line);
     }
@@ -51,19 +57,19 @@
       padding:11px 16px; border-radius:999px;
       border:1px solid var(--line);
       text-decoration:none; font-weight:950;
-      transition:transform .08s ease, border-color .12s ease, background .12s ease;
+      transition:transform .08s ease, border-color .12s ease, background .12s ease, box-shadow .12s ease;
       user-select:none;
     }
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{background:rgba(250,204,21,.18); border-color:rgba(250,204,21,.35)}
+    .btn:hover{transform:translateY(-1px); box-shadow:0 10px 22px rgba(0,0,0,.18)}
+    .btn.primary{background:rgba(250,204,21,.20); border-color:rgba(250,204,21,.40)}
     .btn.outline{background:transparent}
-    .btn.dark{background:rgba(255,255,255,.06)}
+    .btn.dark{background:rgba(255,255,255,.07)}
     .btn.block{width:100%}
 
     /* Sections */
     .section{padding:48px 0}
     .section.alt{
-      background:rgba(17,24,39,.35);
+      background:rgba(17,24,39,.42);
       border-top:1px solid var(--line);
       border-bottom:1px solid var(--line);
     }
@@ -73,15 +79,15 @@
     .muted{color:var(--muted)}
     .badge{
       display:inline-flex; padding:6px 10px; border-radius:999px;
-      border:1px solid rgba(250,204,21,.25);
-      color:rgba(250,204,21,.95);
-      background:rgba(250,204,21,.08);
+      border:1px solid rgba(250,204,21,.28);
+      color:rgba(250,204,21,.96);
+      background:rgba(250,204,21,.10);
       font-weight:950; font-size:12px;
     }
 
     /* Cards & grids */
     .card{
-      background:rgba(17,28,51,.78);
+      background:var(--card);
       border:1px solid var(--line);
       border-radius:var(--radius);
       padding:16px;
@@ -105,10 +111,11 @@
       object-fit:cover;
       transform:scale(1.03);
       z-index:0;
+      filter:saturate(1.05) contrast(1.02) brightness(.95);
     }
     .heroOverlay{
       position:absolute; inset:0;
-      background:linear-gradient(rgba(11,18,32,.78), rgba(11,18,32,.85));
+      background:linear-gradient(rgba(15,23,42,.70), rgba(11,18,32,.78));
       z-index:1;
     }
     .heroContent{position:relative; z-index:2}
@@ -123,12 +130,18 @@
       border-radius:var(--radius);
       border:1px solid var(--line);
       display:block;
+      background:rgba(255,255,255,.06);
     }
     .imgCard{
-      background:rgba(255,255,255,.04);
+      background:rgba(255,255,255,.06); /* lysere så bildene “popper” mer */
       border:1px solid var(--line);
       border-radius:var(--radius);
       padding:10px;
+    }
+    .imgCard img{
+      /* hjelper spesielt webp/jpg som er mørke eller rare proporsjoner */
+      object-fit:cover;
+      max-height:420px;
     }
     .imgCaption{font-size:13px; color:var(--muted); margin-top:8px}
 
@@ -138,7 +151,7 @@
       display:inline-flex; gap:8px; align-items:center;
       padding:8px 12px; border-radius:999px;
       border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
+      background:rgba(255,255,255,.07);
       font-weight:850;
     }
 
@@ -146,7 +159,7 @@
     .steps{display:grid; gap:10px; margin-top:12px}
     .step{
       display:flex; gap:10px; align-items:flex-start;
-      background:rgba(255,255,255,.04);
+      background:rgba(255,255,255,.06);
       border:1px solid var(--line);
       border-radius:var(--radius);
       padding:12px;
@@ -155,15 +168,37 @@
       width:28px; height:28px; border-radius:10px;
       display:flex; align-items:center; justify-content:center;
       font-weight:1000;
-      background:rgba(250,204,21,.12);
-      border:1px solid rgba(250,204,21,.22);
+      background:rgba(250,204,21,.14);
+      border:1px solid rgba(250,204,21,.26);
       flex:0 0 auto;
+    }
+
+    /* Map */
+    .mapWrap{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:rgba(255,255,255,.05);
+      box-shadow: var(--shadow);
+    }
+    .mapWrap iframe{
+      width:100%;
+      height:320px;
+      border:0;
+      display:block;
+    }
+    .mapNote{
+      padding:10px 12px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      background:rgba(255,255,255,.04);
     }
 
     /* Footer & sticky */
     footer{
       padding:28px 0;
-      background:rgba(17,24,39,.35);
+      background:rgba(17,24,39,.42);
       border-top:1px solid var(--line);
     }
     .footerRow{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap}
@@ -178,6 +213,7 @@
       .grid2, .grid2.equal{grid-template-columns:1fr}
       .grid3{grid-template-columns:1fr}
       .hero{padding:92px 0 70px}
+      .imgCard img{max-height:360px}
       .sticky{display:flex}
       body{padding-bottom:78px}
     }
@@ -219,7 +255,7 @@
               Book via Hygglo
             </a>
 
-            <a class="btn outline" href="sms:+4799365520?&body=Hei!%20Jeg%20vil%20booke%20tekstilrenser.%0ABy:%20Oslo%0ADato:%20%0ATidsrom:%20(1%20time%20/%201%20d%C3%B8gn%20/%203%20d%C3%B8gn)%0A">
+            <a class="btn outline" href="sms:+4799365520?&body=Hei!%20Jeg%20vil%20booke%20tekstilrenser.%0ABy:%20Oslo%0ADato:%20%0ATidsrom:%20(standard%201%20d%C3%B8gn%20/%20helg)%0A">
               Send SMS (booking)
             </a>
           </div>
@@ -227,7 +263,7 @@
           <div class="grid3">
             <div class="pill">📍 Etterstadsletta 3, Oslo</div>
             <div class="pill">🕔 Åpent 05–22</div>
-            <div class="pill">🧼 Tabletter 35,-</div>
+            <div class="pill">🧼 Rengjøringsmiddel 35,-</div>
           </div>
         </div>
 
@@ -236,7 +272,7 @@
           <p style="margin:0"><strong>Adresse:</strong> Etterstadsletta 3, Oslo</p>
           <p style="margin:0"><strong>Åpningstid:</strong> 05–22 alle dager</p>
           <p style="margin:10px 0 0" class="muted">
-            For spørsmål: send SMS. For booking: skriv by + dato/tid + varighet.
+            For spørsmål: send SMS. For booking: skriv by + dato/tid + standard/helg.
           </p>
           <div class="ctaRow" style="margin-top:12px">
             <a class="btn outline" href="tel:+4799365520">Ring</a>
@@ -280,14 +316,19 @@
         </div>
 
         <div class="imgCard">
-          <img src="puzzi-8-1-bilde1.jpg.webp" alt="Kärcher Puzzi 8/1" />
+          <img
+            src="puzzi-8-1-bilde1.jpg.webp"
+            alt="Kärcher Puzzi 8/1"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='IMG_5188_converted.jpg';"
+          />
           <div class="imgCaption">Profesjonell tekstilrenser (eksempel: Kärcher Puzzi-serien).</div>
         </div>
       </div>
 
       <div class="grid2 equal" style="margin-top:16px">
         <div class="imgCard">
-          <img src="IMG_5188_converted.jpg" alt="Tekstilrenser – bilde" />
+          <img src="IMG_5188_converted.jpg" alt="Tekstilrenser – bilde" loading="lazy" />
           <div class="imgCaption">Maskin klar til utleie.</div>
         </div>
 
@@ -306,33 +347,27 @@
   <section class="section alt" id="priser">
     <div class="container">
       <h2>Prisliste (inkl. MVA)</h2>
-      <p class="muted">Merk: Vi tar et <strong>helgetillegg på 50 kr per døgn</strong> for utleie i helger.</p>
+      <p class="muted">Enkelt oppsett: standard / helg + rengjøringsmiddel.</p>
 
       <div class="grid3">
-        <div class="card">
-          <h3>1 time</h3>
-          <div class="price">99,-</div>
-        </div>
         <div class="card" style="border-color:rgba(250,204,21,.35)">
-          <h3>1 døgn</h3>
+          <h3>Standard utleie</h3>
           <div class="price">179,-</div>
-          <p class="muted" style="margin:8px 0 0">Mest populær</p>
+          <p class="muted" style="margin:8px 0 0">Per døgn</p>
         </div>
         <div class="card">
-          <h3>3 døgn</h3>
-          <div class="price">499,-</div>
+          <h3>Helgeutleie</h3>
+          <div class="price">229,-</div>
+          <p class="muted" style="margin:8px 0 0">Fre–Søn (pakke)</p>
+        </div>
+        <div class="card">
+          <h3>Rengjøringsmiddel</h3>
+          <div class="price">35,-</div>
+          <p class="muted" style="margin:8px 0 0">Per stykk</p>
         </div>
       </div>
 
       <div class="grid2 equal" style="margin-top:16px">
-        <div class="card">
-          <h3 style="margin-top:0">Rengjøringstabletter</h3>
-          <p><strong>35,- per stykk</strong> (anbefales for best resultat).</p>
-          <p class="muted" style="margin:6px 0 0">
-            Kun medfølgende rengjøringstabletter skal brukes (beskytter maskinen).
-          </p>
-        </div>
-
         <div class="card">
           <h3 style="margin-top:0">Depositum</h3>
           <p class="muted" style="margin:0">
@@ -342,11 +377,13 @@
             Ved leie via Hygglo: ofte litt dyrere, men Hygglo kan forsikre kunden (slipper depositum).
           </p>
         </div>
-      </div>
 
-      <div class="card" style="margin-top:12px">
-        <strong>Viktig:</strong> Kunden må rengjøre maskinen etter bruk.
-        Brukerveiledning sendes sammen med prosedyre for uthenting av maskin.
+        <div class="card">
+          <h3 style="margin-top:0">Viktig</h3>
+          <p class="muted" style="margin:0">
+            Kunden må rengjøre maskinen etter bruk. Brukerveiledning + uthentingsprosedyre sendes på SMS.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -370,14 +407,31 @@
 
           <div class="ctaRow" style="margin-top:14px">
             <a class="btn primary" href="https://www.hygglo.no/i/4da-kraftig-tekstilrensertepperenser-leies-ut-billig-i-bergen-101" target="_blank" rel="noopener">Book via Hygglo</a>
-            <a class="btn outline" href="sms:+4799365520?&body=Hei!%20Jeg%20vil%20booke%20tekstilrenser.%0ABy:%20Oslo%0ADato:%20%0ATidsrom:%20(1%20time%20/%201%20d%C3%B8gn%20/%203%20d%C3%B8gn)%0A">Send SMS</a>
+            <a class="btn outline" href="sms:+4799365520?&body=Hei!%20Jeg%20vil%20booke%20tekstilrenser.%0ABy:%20Oslo%0ADato:%20%0ATidsrom:%20(standard%201%20d%C3%B8gn%20/%20helg)%0A">Send SMS</a>
           </div>
         </div>
 
-        <div class="imgCard">
-          <img src="storage.jpeg" alt="Lagergang / self storage" />
-          <div class="imgCaption">Selvbetjent henting fra lagerrom (City Self Storage).</div>
+        <div class="stack">
+          <div class="imgCard">
+            <img src="storage.jpeg" alt="Lagergang / self storage" loading="lazy" />
+            <div class="imgCaption">Selvbetjent henting fra lagerrom (City Self Storage).</div>
+          </div>
+
+          <!-- Google Maps embed -->
+          <div class="mapWrap" aria-label="Kart til Etterstadsletta 3">
+            <iframe
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Etterstadsletta%203,%20Oslo&output=embed"
+              title="Google Maps: Etterstadsletta 3, Oslo"
+            ></iframe>
+            <div class="mapNote">
+              <strong>Adresse:</strong> Etterstadsletta 3, Oslo •
+              <a href="https://www.google.com/maps/search/?api=1&query=Etterstadsletta%203%2C%20Oslo" target="_blank" rel="noopener">Åpne i Google Maps</a>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -390,7 +444,7 @@
 
       <div class="grid2 equal">
         <div class="imgCard">
-          <img src="Skjermbilde 2025-12-14 kl. 22.04.11.png" alt="Skjermbilde: booking" />
+          <img src="Skjermbilde 2025-12-14 kl. 22.04.11.png" alt="Skjermbilde: booking" loading="lazy" />
           <div class="imgCaption">Skjermbilde: bookingflyt / booking.</div>
         </div>
 
@@ -402,16 +456,16 @@
 
           <p class="muted">
             Du kan også leie direkte via SMS og betale depositum. Alt refunderes rett etter leieforholdet,
-            fratrukket leiepris og såpe + helgetillegg (hvis helg).
+            fratrukket leiepris og rengjøringsmiddel (hvis kjøpt).
           </p>
 
           <div class="ctaRow">
             <a class="btn primary" href="https://www.hygglo.no/i/4da-kraftig-tekstilrensertepperenser-leies-ut-billig-i-bergen-101" target="_blank" rel="noopener">Book via Hygglo</a>
-            <a class="btn outline" href="sms:+4799365520?&body=Hei!%20Jeg%20vil%20booke%20tekstilrenser.%0ABy:%20Oslo%0ADato:%20%0ATidsrom:%20(1%20time%20/%201%20d%C3%B8gn%20/%203%20d%C3%B8gn)%0A">Send SMS</a>
+            <a class="btn outline" href="sms:+4799365520?&body=Hei!%20Jeg%20vil%20booke%20tekstilrenser.%0ABy:%20Oslo%0ADato:%20%0ATidsrom:%20(standard%201%20d%C3%B8gn%20/%20helg)%0A">Send SMS</a>
             <a class="btn dark" href="tel:+4799365520">Ring 99 36 55 20</a>
           </div>
 
-          <div class="card" style="margin-top:12px; background:rgba(255,255,255,.04); box-shadow:none">
+          <div class="card" style="margin-top:12px; background:rgba(255,255,255,.06); box-shadow:none">
             <strong>Kontakt:</strong><br>
             Telefon: <a href="tel:+4799365520">99 36 55 20</a><br>
             E-post: <a href="mailto:alhabbachyasser@gmail.com">alhabbachyasser@gmail.com</a><br>
@@ -436,7 +490,7 @@
   <!-- Sticky bar (mobile) -->
   <div class="sticky">
     <a class="btn outline" href="tel:+4799365520">Ring</a>
-    <a class="btn outline" href="sms:+4799365520?&body=Hei!%20Jeg%20vil%20booke%20tekstilrenser.%0ABy:%20Oslo%0ADato:%20%0ATidsrom:%20(1%20time%20/%201%20d%C3%B8gn%20/%203%20d%C3%B8gn)%0A">SMS</a>
+    <a class="btn outline" href="sms:+4799365520?&body=Hei!%20Jeg%20vil%20booke%20tekstilrenser.%0ABy:%20Oslo%0ADato:%20%0ATidsrom:%20(standard%201%20d%C3%B8gn%20/%20helg)%0A">SMS</a>
     <a class="btn primary" href="https://www.hygglo.no/i/4da-kraftig-tekstilrensertepperenser-leies-ut-billig-i-bergen-101" target="_blank" rel="noopener">Book</a>
   </div>
 
