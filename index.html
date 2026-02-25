@@ -3,14 +3,105 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tekstilrens Oslo – Lei møbelrens & tepperens</title>
-  <meta name="description" content="Lei profesjonell tekstilrenser i Oslo. Perfekt for sofa, tepper og bilseter. Selvbetjent henting på Etterstadsletta 3. Åpent 05–22. Book via Hygglo eller SMS." />
+
+  <!-- SEO: Title + Description -->
+  <title>Lei tekstilrenser i Oslo (sofa, tepper, bilseter) – Etterstadsletta 3 | Tekstilrens Oslo</title>
+  <meta name="description" content="Lei profesjonell tekstilrenser/tepperenser i Oslo. Perfekt til sofa, tepper, madrass og bilseter. Selvbetjent henting på Etterstadsletta 3 (City Self Storage). Åpent 05–22. Book via Hygglo eller SMS." />
+
+  <!-- SEO: Indexing -->
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="language" content="no" />
+
+  <!-- Canonical (anbefalt: bytt ut med din faktiske GitHub Pages-URL) -->
+  <link rel="canonical" href="https://DINSIDE.github.io/" />
+
+  <!-- Open Graph / Social (anbefalt for deling) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nb_NO" />
+  <meta property="og:title" content="Lei tekstilrenser i Oslo – sofa, tepper og bilseter | Tekstilrens Oslo" />
+  <meta property="og:description" content="Profesjonell tekstilrens/tepperens i Oslo. Selvbetjent henting Etterstadsletta 3. Åpent 05–22. Book via Hygglo eller SMS." />
+  <meta property="og:image" content="IMG_2808_converted.jpg" />
+  <meta property="og:image:alt" content="Tekstilrensere i lagerrom klare til utleie" />
+  <meta property="og:url" content="https://DINSIDE.github.io/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lei tekstilrenser i Oslo – Tekstilrens Oslo" />
+  <meta name="twitter:description" content="Sofa, tepper, madrass og bilseter. Etterstadsletta 3. Åpent 05–22." />
+  <meta name="twitter:image" content="IMG_2808_converted.jpg" />
+
+  <!-- Structured data: LocalBusiness + FAQ (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Tekstilrens Oslo",
+    "description": "Utleie av profesjonell tekstilrenser/tepperenser i Oslo for sofa, tepper, madrass og bilseter. Selvbetjent henting på Etterstadsletta 3.",
+    "telephone": "+47 99 36 55 20",
+    "email": "alhabbachyasser@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Etterstadsletta 3",
+      "addressLocality": "Oslo",
+      "addressCountry": "NO"
+    },
+    "openingHours": "Mo-Su 05:00-22:00",
+    "areaServed": "Oslo",
+    "image": [
+      "IMG_2808_converted.jpg",
+      "Karcher%20Puzzi%2010%3A1.jpg",
+      "Karcher%20Puzzi%208%3A1.webp",
+      "Cleaning%20Agent.png"
+    ],
+    "url": "https://DINSIDE.github.io/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hva kan jeg bruke tekstilrenseren til?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tekstilrenseren passer til sofa og møbler, tepper, madrass og bilseter. Den fjerner flekker, lukt og inngrodd smuss med dyprens."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvor henter jeg maskinen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Henting er selvbetjent hos City Self Storage på Etterstadsletta 3 i Oslo. Du får prosedyre og brukerveiledning på SMS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvilke åpningstider gjelder?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Åpent alle dager 05–22 for uthenting og levering."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Må jeg bruke deres rengjøringsmiddel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, vi anbefaler rengjøringsmiddelet som er laget for tekstilrensere for best resultat og trygg drift. Pris: 35 kr per stykk."
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root{
       /* Lysere tema + mer synlig bakgrunn */
-      --bg:#0f172a;              /* litt lysere enn før */
-      --bg2:#111c33;             /* sekundær bakgrunn */
+      --bg:#0f172a;
+      --bg2:#111c33;
       --panel:rgba(17,24,39,.62);
       --card:rgba(17,28,51,.78);
       --card2:rgba(255,255,255,.06);
@@ -29,7 +120,12 @@
       background:
         radial-gradient(1200px 600px at 15% -10%, rgba(250,204,21,.10), transparent 60%),
         radial-gradient(900px 500px at 95% 10%, rgba(99,102,241,.12), transparent 55%),
-        linear-gradient(180deg, var(--bg), #0b1220 70%, #0a1020);
+        linear-gradient(180deg, var(--bg), #0b1220 70%, #0a1020),
+        url('Background.png');
+      background-size:auto, auto, auto, cover;
+      background-position:center, center, center, center;
+      background-repeat:no-repeat, no-repeat, no-repeat, no-repeat;
+      background-attachment:scroll, scroll, scroll, fixed;
       color:var(--text);
       line-height:1.6;
     }
@@ -47,7 +143,17 @@
       display:flex; align-items:center; justify-content:space-between;
       gap:12px; padding:12px 0;
     }
-    .brand{font-weight:900; letter-spacing:.2px}
+    .brand{
+      font-weight:900; letter-spacing:.2px;
+      display:flex; align-items:center; gap:10px;
+    }
+    .brand .logo{
+      width:30px; height:30px;
+      border-radius:10px;
+      border:0 !important;
+      display:block;
+    }
+
     .navlinks{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
     .navlinks a{font-weight:900; text-decoration:none}
 
@@ -133,13 +239,12 @@
       background:rgba(255,255,255,.06);
     }
     .imgCard{
-      background:rgba(255,255,255,.06); /* lysere så bildene “popper” mer */
+      background:rgba(255,255,255,.06);
       border:1px solid var(--line);
       border-radius:var(--radius);
       padding:10px;
     }
     .imgCard img{
-      /* hjelper spesielt webp/jpg som er mørke eller rare proporsjoner */
       object-fit:cover;
       max-height:420px;
     }
@@ -223,7 +328,10 @@
 <body>
 <header>
   <div class="container nav">
-    <div class="brand">Tekstilrens Oslo</div>
+    <div class="brand">
+      <img class="logo" src="logo_converted.png" alt="Tekstilrens Oslo logo" />
+      <span>Tekstilrens Oslo</span>
+    </div>
     <div class="navlinks">
       <a class="btn outline" href="#priser">Priser</a>
       <a class="btn outline" href="#henting">Henting</a>
@@ -236,18 +344,19 @@
 <main>
 
   <!-- HERO -->
-  <section class="hero" id="topp">
-    <img class="heroBg" src="IMG_2808_converted.jpg" alt="Tekstilrensere i lagerrom" />
+  <section class="hero" id="topp" aria-label="Tekstilrens Oslo – lei tekstilrenser i Oslo">
+    <img class="heroBg" src="IMG_2808_converted.jpg" alt="Tekstilrensere klare til utleie i Oslo" />
     <div class="heroOverlay"></div>
 
     <div class="container heroContent">
       <div class="grid2">
         <div>
-          <div class="badge">Møbelrens • Tepperens • Bilseter</div>
-          <h1>Profesjonell tepperens- og møbelrens-tjeneste i Oslo</h1>
+          <div class="badge">Tekstilrenser • Tepperenser • Møbelrens</div>
+          <h1>Lei tekstilrenser i Oslo – sofa, tepper, madrass og bilseter</h1>
           <p class="lead">
-            Trenger du å friske opp tepper, sofaer, bilseter eller andre tekstiler?
-            Vi tilbyr kraftige tepperensere og møbelrensere som gir fantastiske resultater — enkelt og rimelig!
+            Lei en profesjonell <strong>tepperenser/tekstilrenser i Oslo</strong> og få dyprens av sofa, tepper,
+            madrass og bilseter hjemme. Enkel, rimelig og effektiv løsning – med <strong>selvbetjent henting</strong>
+            på Etterstadsletta 3.
           </p>
 
           <div class="ctaRow">
@@ -268,7 +377,7 @@
         </div>
 
         <div class="card">
-          <h3 style="margin-top:0">Kort info</h3>
+          <h2 style="margin-top:0;font-size:20px">Kort info</h2>
           <p style="margin:0"><strong>Adresse:</strong> Etterstadsletta 3, Oslo</p>
           <p style="margin:0"><strong>Åpningstid:</strong> 05–22 alle dager</p>
           <p style="margin:10px 0 0" class="muted">
@@ -284,57 +393,62 @@
   </section>
 
   <!-- WHAT / WHY -->
-  <section class="section" id="tjenester">
+  <section class="section" id="tjenester" aria-label="Hva kan du rense med tekstilrenser?">
     <div class="container">
-      <h2>Hva kan du rense?</h2>
-      <p class="muted">Maskinen kan brukes til alt dette – hjemme hos deg.</p>
+      <h2>Hva kan du rense med en tekstilrenser?</h2>
+      <p class="muted">
+        Perfekt for deg som vil ha profesjonell <strong>møbelrens i Oslo</strong> eller <strong>tepperens i Oslo</strong>,
+        uten å bestille dyre tjenester. Gjør jobben hjemme – når det passer deg.
+      </p>
 
       <div class="grid3">
         <div class="card">
           <h3>Sofa & møbler</h3>
-          <p class="muted">Fjerner flekker og lukt – gjør sofaen “fresh” igjen.</p>
+          <p class="muted">Dyprens som fjerner flekker, lukt og “grå” tekstil – sofaen føles ny igjen.</p>
         </div>
         <div class="card">
           <h3>Tepper & madrass</h3>
-          <p class="muted">Dyprens som løfter smuss og støv ut av tekstil.</p>
+          <p class="muted">Løfter smuss og støv ut av fibrene – svært effektivt på tepper og madrasser.</p>
         </div>
         <div class="card">
           <h3>Bilseter & interiør</h3>
-          <p class="muted">Perfekt for bilseter, stoff og gulvtepper.</p>
+          <p class="muted">Kraftig rens av bilseter, dørtrekk og matter – ideelt før salg eller vårpuss.</p>
         </div>
       </div>
 
       <div class="grid2 equal" style="margin-top:16px">
         <div class="card">
-          <h3 style="margin-top:0">Hvorfor velge oss?</h3>
+          <h3 style="margin-top:0">Hvorfor leie hos Tekstilrens Oslo?</h3>
           <ul class="muted" style="margin:10px 0 0;padding-left:18px">
-            <li>Beste priser i Oslo!</li>
-            <li>Enkel selvbetjent henting – åpent lager via kode!</li>
-            <li>Såpe fra Karcher ligger i alle lagerrommene våre</li>
-            <li>Effektive og profesjonelle maskiner!</li>
+            <li>Enkel og rimelig utleie av tekstilrenser i Oslo</li>
+            <li>Selvbetjent henting/levering på Etterstadsletta 3</li>
+            <li>Åpent 05–22 – fleksibelt for jobb og hverdag</li>
+            <li>Proffe maskiner fra Kärcher gir tydelig resultat</li>
           </ul>
         </div>
 
-        <div class="imgCard">
-          <img
-            src="puzzi-8-1-bilde1.jpg.webp"
-            alt="Kärcher Puzzi 8/1"
-            loading="lazy"
-            onerror="this.onerror=null;this.src='IMG_5188_converted.jpg';"
-          />
-          <div class="imgCaption">Profesjonell tekstilrenser (eksempel: Kärcher Puzzi-serien).</div>
+        <!-- To maskiner -->
+        <div class="stack">
+          <div class="imgCard">
+            <img src="Karcher%20Puzzi%2010%3A1.jpg" alt="Kärcher Puzzi 10/1 tekstilrenser med stor tank og teppeskaft" loading="lazy" />
+            <div class="imgCaption"><strong>Kärcher Puzzi 10/1</strong> – større tank og teppeskaft følger med (perfekt for større jobber og tepper).</div>
+          </div>
+          <div class="imgCard">
+            <img src="Karcher%20Puzzi%208%3A1.webp" alt="Kärcher Puzzi 8/1 liten og lett tekstilrenser med kraftig motor" loading="lazy" />
+            <div class="imgCaption"><strong>Kärcher Puzzi 8/1</strong> – mindre og lettere å bære, med samme kraftige motor som 10/1.</div>
+          </div>
         </div>
       </div>
 
       <div class="grid2 equal" style="margin-top:16px">
         <div class="imgCard">
-          <img src="IMG_5188_converted.jpg" alt="Tekstilrenser – bilde" loading="lazy" />
+          <img src="IMG_5188_converted.jpg" alt="Tekstilrenser klar til utleie" loading="lazy" />
           <div class="imgCaption">Maskin klar til utleie.</div>
         </div>
 
         <div class="card">
-          <h3 style="margin-top:0">Se maskinen i bruk</h3>
-          <p class="muted">YouTube: Hvordan bruke maskinen</p>
+          <h3 style="margin-top:0">Se hvordan du bruker maskinen</h3>
+          <p class="muted">Video: enkel gjennomgang av bruk og rens.</p>
           <a class="btn outline" target="_blank" rel="noopener" href="https://youtu.be/zQKJFvPXn5A?si=mrvcphIEamnX-01Z">
             Åpne video
           </a>
@@ -344,10 +458,10 @@
   </section>
 
   <!-- PRICING -->
-  <section class="section alt" id="priser">
+  <section class="section alt" id="priser" aria-label="Priser for leie av tekstilrenser i Oslo">
     <div class="container">
-      <h2>Prisliste (inkl. MVA)</h2>
-      <p class="muted">Enkelt oppsett: standard / helg + rengjøringsmiddel.</p>
+      <h2>Priser – leie av tekstilrenser i Oslo (inkl. MVA)</h2>
+      <p class="muted">Velg standard eller helg. Rengjøringsmiddel selges separat for best mulig resultat.</p>
 
       <div class="grid3">
         <div class="card" style="border-color:rgba(250,204,21,.35)">
@@ -385,18 +499,34 @@
           </p>
         </div>
       </div>
+
+      <!-- Rengjøringsmiddel-bilde + proff tekst -->
+      <div class="grid2 equal" style="margin-top:16px">
+        <div class="imgCard">
+          <img src="Cleaning%20Agent.png" alt="Rengjøringsmiddel til tekstilrenser (cleaning agent)" loading="lazy" />
+          <div class="imgCaption">Rengjøringsmiddel vi bruker (35,- per stykk).</div>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Rengjøringsmiddel (anbefalt for best resultat)</h3>
+          <p class="muted" style="margin:0">
+            Vi bruker et rengjøringsmiddel utviklet for tekstilrensere – laget for effektiv flekkfjerning
+            og et jevnt, profesjonelt resultat. Det bidrar til kontrollert skumdannelse, skånsom rens av tekstil
+            og trygg drift av maskinen over tid.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- PICKUP -->
-  <section class="section" id="henting">
+  <section class="section" id="henting" aria-label="Selvbetjent henting Etterstadsletta 3 Oslo">
     <div class="container">
-      <h2>Henting – helt selvbetjent</h2>
+      <h2>Henting i Oslo – helt selvbetjent (Etterstadsletta 3)</h2>
       <div class="grid2 equal">
         <div class="card">
           <p>
             Maskinene hentes enkelt fra <strong>City Self Storage</strong> på <strong>Etterstadsletta 3</strong>.
-            Åpne lageret selv via en praktisk prosedyre som sendes til deg — <strong>ingen nøkkel eller personale</strong> nødvendig!
+            Du får prosedyre på SMS – <strong>ingen nøkkel eller personale</strong> nødvendig.
           </p>
 
           <div class="steps">
@@ -413,11 +543,10 @@
 
         <div class="stack">
           <div class="imgCard">
-            <img src="storage.jpeg" alt="Lagergang / self storage" loading="lazy" />
+            <img src="storage.jpeg" alt="City Self Storage lagergang – uthenting av tekstilrenser" loading="lazy" />
             <div class="imgCaption">Selvbetjent henting fra lagerrom (City Self Storage).</div>
           </div>
 
-          <!-- Google Maps embed -->
           <div class="mapWrap" aria-label="Kart til Etterstadsletta 3">
             <iframe
               loading="lazy"
@@ -437,14 +566,14 @@
   </section>
 
   <!-- BOOKING HELP (SCREENSHOT) -->
-  <section class="section alt" id="slikbookerdu">
+  <section class="section alt" id="slikbookerdu" aria-label="Slik booker du tekstilrenser i Oslo">
     <div class="container">
-      <h2>Slik booker du (enkelt)</h2>
-      <p class="muted">Velg Hygglo eller SMS. Bestill før maskinene blir reservert!</p>
+      <h2>Slik booker du tekstilrenser (enkelt)</h2>
+      <p class="muted">Velg Hygglo eller SMS. Book tidlig – maskinene blir ofte reservert.</p>
 
       <div class="grid2 equal">
         <div class="imgCard">
-          <img src="Skjermbilde 2025-12-14 kl. 22.04.11.png" alt="Skjermbilde: booking" loading="lazy" />
+          <img src="Skjermbilde%202025-12-14%20kl.%2022.04.11.png" alt="Skjermbilde av bookingflyt for tekstilrenser" loading="lazy" />
           <div class="imgCaption">Skjermbilde: bookingflyt / booking.</div>
         </div>
 
@@ -472,6 +601,14 @@
             <span class="muted">Åpent 05–22 alle dager.</span>
           </div>
         </div>
+      </div>
+
+      <!-- Mini FAQ (synlig tekst i tillegg til FAQ schema) -->
+      <div class="card" style="margin-top:16px">
+        <h3 style="margin-top:0">Spørsmål og svar</h3>
+        <p class="muted" style="margin:0"><strong>Hva passer det til?</strong> Sofa, tepper, madrass og bilseter.</p>
+        <p class="muted" style="margin:8px 0 0"><strong>Hvor henter jeg?</strong> Etterstadsletta 3 (City Self Storage) – selvbetjent.</p>
+        <p class="muted" style="margin:8px 0 0"><strong>Når er det åpent?</strong> Alle dager 05–22.</p>
       </div>
     </div>
   </section>
